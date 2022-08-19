@@ -1,0 +1,4 @@
+- name: Install plex media server
+  apt:
+    deb: "{{ plex_deb_url }}"
+    state: present

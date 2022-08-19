@@ -1,0 +1,6 @@
+# The version to install.
+# Can be found in the download url on https://www.plex.tv/media-server-downloads/
+# Must be in a format like "1.28.1.6057-f954ae495"
+plex_version:
+# See the link above to see which architectures are supported.
+plex_architecture: amd64

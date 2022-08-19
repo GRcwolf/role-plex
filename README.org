@@ -1,0 +1,26 @@
+#+title: Plex Role
+#+author: Chris Wolf <chris@chriswolf.ch>
+
+This in an ansible role that installs a plex media server.
+
+** Limitations
+This role simply installs the plex debian package.
+It can therefore only be used on debian based systems.
+
+** Configuration
+The configurations is pretty simple as the role basically only installs a debian package.
+
+| Name              | Default | Description                                                           |
+|-------------------+---------+-----------------------------------------------------------------------|
+| plex_version      |         | The version of plex, that will be installed                           |
+| plex_architecture | amd64   | Defines for which architecture, the plex package should be downloaded |
+
+/Note that plex versions have a hash at the end. This needs to be included in the version varaible./
+
+** Variables
+The role contains a varaible that isn't meant to be changed, as this is most likely not necessary.
+If you want to change it, you can.
+
+| Name         | Default                                                                                                                                  | Description                 |
+|--------------+------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------|
+| plex_deb_url | https://downloads.plex.tv/plex-media-server-new/{{ plex_version }}/debian/plexmediaserver_{{ plex_version }}_{{ plex_architecture }}.deb | The url of the .deb package |
